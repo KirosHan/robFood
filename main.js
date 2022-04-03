@@ -51,17 +51,30 @@ const start = () => {
 		text("选择送达时间").click()
 		//sleep(1000)
 		start()
-	} else if (hasText("返回购物车")) { //
+	} /*else if (hasText("返回购物车")) { //
 		//id('bottom_style_two').findOne().parent().click()
 		text("返回购物车").click()
 		//sleep(1000)
 		start()
-	} else if (hasText("继续支付")) { //
+	}*/
+	 else if (hasText("继续支付")) { //
 		//id('bottom_style_two').findOne().parent().click()
 		text("继续支付").click()
 		//sleep(1000)
 		start()
-	}else if (hasText('立即支付')) { //支付
+	}else if (hasText("重新加载")) { //
+		//id('bottom_style_two').findOne().parent().click()
+	
+		className("android.widget.LinearLayout").id('ll_reload_action').findOne().click()
+		//sleep(1000)
+		start()
+	}else if (hasText("下单失败")) { //
+		//id('bottom_style_two').findOne().parent().click()
+		text("返回购物车").click()
+		//className("android.widget.LinearLayout").id('ll_reload_action').findOne().click()
+		//sleep(1000)
+		start()
+	} else if (hasText('立即支付')) { //支付
 		className("android.widget.TextView").text("立即支付").findOne().click()
 		//sleep(1000)
 		start()
